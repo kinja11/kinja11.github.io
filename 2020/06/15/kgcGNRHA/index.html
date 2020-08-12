@@ -1,0 +1,1140 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="【面试】FPS枪械手感拆分, 整理丨沉淀丨输出">
+    <meta name="description" content="整理文字的万能酒馆">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>【面试】FPS枪械手感拆分 | 整理丨沉淀丨输出</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+
+<body>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    
+                    
+                    <span class="logo-span">整理丨沉淀丨输出</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">整理丨沉淀丨输出</div>
+        <div class="logo-desc">
+            
+            整理文字的万能酒馆
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712190424.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">【面试】FPS枪械手感拆分</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%88%86%E6%9E%90/">
+                                <span class="chip bg-color">游戏分析</span>
+                            </a>
+                        
+                            <a href="/tags/%E5%B0%84%E5%87%BB%E6%B8%B8%E6%88%8F/">
+                                <span class="chip bg-color">射击游戏</span>
+                            </a>
+                        
+                            <a href="/tags/FPS/">
+                                <span class="chip bg-color">FPS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%B0%84%E5%87%BB%E6%B8%B8%E6%88%8F/" class="post-category">
+                                射击游戏
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-06-15
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <blockquote>
+<p>面试问题  引申思考</p>
+</blockquote>
+<p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712190644.png" alt="image-20200712190644808"></p>
+<p><strong><center>对FPS游戏来说，枪械的“手感”始终是重中之重，缺少合适“手感”的枪械就是一盘塑模展示菜，除了好看一无是处（如果不好看那就更惨了）。</center></strong></p>
+<p><strong><center>优秀的枪械手感，意味着存在感强的反馈内容，丰富的多角度的反馈形式和层次分明的反馈体验。</center></strong></p>
+<h1 id="视觉"><a href="#视觉" class="headerlink" title="视觉"></a>视觉</h1><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191359.gif" alt="img"></p>
+<h2 id="操作反馈"><a href="#操作反馈" class="headerlink" title="操作反馈"></a><strong>操作反馈</strong></h2><p>对射击游戏来说，<strong>即时且符合预期</strong>的操作反馈是玩家评价手感的基础。  正常游戏中，角色视角是跟随玩家控制器（鼠标/摇杆/触屏）进行移动的。当玩家使用控制器时，角色视角会随控制器同步移动，这是即时反馈的基本要求。而PUBG、Fortnite早期玩家论坛中会有“鼠标不跟手”反馈出现的原因，就是由于虚幻4“自带顺滑感”的特性导致的即时反馈不合格。对一些摄像机镜头错误，或带有视角加速度等问题的射击游戏，玩家会在游戏中陷入视角定位不准的困惑，导致其无法根据肌肉记忆做出<strong>符合预期</strong>的操作。</p>
+<p><strong><center>操作反馈影响着玩家在战局中对角色的掌控感，是游戏操作感的基础</center></strong></p>
+<h2 id="枪械视效——枪械本身才是手感核心"><a href="#枪械视效——枪械本身才是手感核心" class="headerlink" title="枪械视效——枪械本身才是手感核心"></a><strong>枪械视效——枪械本身才是手感核心</strong></h2><h3 id="子弹散射"><a href="#子弹散射" class="headerlink" title="子弹散射"></a><strong>子弹散射</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191449.gif" alt="img"></p>
+<ul>
+<li>游戏中又称为准星扩散，为了体现连续射击时子弹精准度的下降。画面表现为游戏中枪械射击时“准星放大-扩散到极限-准星回缩”的循环。</li>
+<li>准星中间的范围即为子弹散射的范围，准星扩散范围与散射范围成正比，当准星十字线相交时，子弹击中位置即为准星指向位置。</li>
+<li>为了体现人物移动时瞄准难度的提升，除连续射击外，玩家的行走、跳跃、蹲伏等状态同样会影响子弹散射范围。</li>
+</ul>
+<h3 id="后坐力"><a href="#后坐力" class="headerlink" title="后坐力"></a><strong>后坐力</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191538.gif" alt="img"></p>
+<ul>
+<li>为了体现现实中枪支后坐力导致枪口的偏移，画面表现通过摄像机镜头的整体偏移、枪口上扬动画、人物拉枪动画实现。</li>
+<li>镜头偏移除了x轴y轴的横竖偏移外，一些拟真FPS会在瞄具瞄准状态配置z轴偏移。同时策划需要根据枪械种类配置偏移的最小值、最大值、随机度等参数，通过不同的偏移参数，实现不同威力枪械的区分度。</li>
+<li>开火特效、子弹特效需要在后坐力导致的枪口偏移后触发，否则会出现子弹抢先出膛的乌龙情况。</li>
+</ul>
+<h3 id="枪械重量"><a href="#枪械重量" class="headerlink" title="枪械重量"></a><strong>枪械重量</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191542.gif" alt="img"></p>
+<ul>
+<li>画面表现为角色移动/动作动画速度的快慢。</li>
+<li>为体现不同类枪械间的差异。载弹量高、威力大的枪械重量一般会配置的比较重。如CS中【m249】与【mp5】的差异表现。‘</li>
+<li>枪械重量不仅影响角色移动速度，换弹、切换枪械等动作动画速度也需要分别配置（动作动画速度是重量感体现的重要因素，如APEX中直布罗陀的移动速度一定，但手臂摆动速度明显更慢。）</li>
+</ul>
+<h3 id="载弹量、备弹量"><a href="#载弹量、备弹量" class="headerlink" title="载弹量、备弹量"></a><strong>载弹量、备弹量</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191556.jpg" alt="img"></p>
+<ul>
+<li>体现不同枪械差异，使枪械属性符合玩家认知（7发的沙鹰可以，17发的沙鹰就过分了）。</li>
+</ul>
+<h3 id="射击间隔"><a href="#射击间隔" class="headerlink" title="射击间隔"></a><strong>射击间隔</strong></h3><ul>
+<li>游戏中又称为射速，画面表现为两次子弹开火特效的时间间隔。</li>
+<li>射速主要为了体现不同枪械间的种类与火力差异，如APEX中【R99】与【小帮手】的不同射速，表现了两把枪械间威力与瞄准方式的差异。</li>
+</ul>
+<h3 id="换弹速度"><a href="#换弹速度" class="headerlink" title="换弹速度"></a><strong>换弹速度</strong></h3><ul>
+<li>联系上文枪械重量，体现不同枪械差异，使枪械属性符合玩家认知.</li>
+</ul>
+<h2 id="子弹视效"><a href="#子弹视效" class="headerlink" title="子弹视效"></a><strong>子弹视效</strong></h2><h3 id="射程"><a href="#射程" class="headerlink" title="射程"></a><strong>射程</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191647.jpg" alt="img"></p>
+<ul>
+<li>为体现不同枪械差异，游戏内表现为枪械不同距离下的衰减衰减，子弹在不同距离下的伤害不同，且超出有效射程的子弹将受到重力参数影响出现子弹下坠。</li>
+</ul>
+<h3 id="子弹飞行轨迹"><a href="#子弹飞行轨迹" class="headerlink" title="子弹飞行轨迹"></a><strong>子弹飞行轨迹</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191701.gif" alt="img"></p>
+<ul>
+<li>游戏内又称为弹道，为体现不同枪械差异，游戏内表现为子弹在开火后由枪口到击中点之间的弹道特效。</li>
+</ul>
+<h3 id="子弹飞行速度"><a href="#子弹飞行速度" class="headerlink" title="子弹飞行速度"></a><strong>子弹飞行速度</strong></h3><ul>
+<li>为体现不同枪械差异，游戏内表现为枪械不同距离下玩家开火到子弹击中准星指向位置需要的时间。</li>
+</ul>
+<h2 id="命中视效"><a href="#命中视效" class="headerlink" title="命中视效"></a><strong>命中视效</strong></h2><h3 id="命中人体"><a href="#命中人体" class="headerlink" title="命中人体"></a>命中人体</h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191730.gif" alt="img"></p>
+<ul>
+<li>通过文本外的方式，为玩家提供命中、敌人状态、命中部位、击杀与否、命中伤害等信息。强化玩家命中的反馈表现，提升玩家体验。</li>
+</ul>
+<h3 id="命中掩体"><a href="#命中掩体" class="headerlink" title="命中掩体"></a><strong>命中掩体</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191735.jpg" alt="img"></p>
+<ul>
+<li><p>穿透：</p>
+<p>子弹穿过掩体的画面表现，部分游戏会根据掩体材质、子弹威力、子弹数量不同提供反馈不同的画面。</p>
+</li>
+</ul>
+<p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191753.jpg" alt="img"></p>
+<ul>
+<li><p>未穿透：</p>
+<p>子弹击中掩体后的弹痕。</p>
+</li>
+</ul>
+<h2 id="镜头视效"><a href="#镜头视效" class="headerlink" title="镜头视效"></a><strong>镜头视效</strong></h2><h3 id="枪械指向性"><a href="#枪械指向性" class="headerlink" title="枪械指向性"></a><strong>枪械指向性</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191819.jpg" alt="img"></p>
+<p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191821.jpg" alt="img"></p>
+<ul>
+<li>通过枪械模型的枪口指向引导玩家目光集中于<strong>指向性视野</strong>，强化玩家的 <strong>射击目标感</strong>，同时某些大枪械（如CS中AWM、SG553等）会在设计时刻意弱化枪械指向性。给玩家一种”盲狙“难以命中的感觉。</li>
+</ul>
+<h3 id="特写演出"><a href="#特写演出" class="headerlink" title="特写演出"></a><strong>特写演出</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191826.gif" alt="img"></p>
+<ul>
+<li>如狙击精英的击杀特写、DOOM、COD、BF的第一人称处决动画，用一系列特写动画强化玩家击杀敌人的表现，刺激玩家获得正反馈。</li>
+</ul>
+<h3 id="受击反馈"><a href="#受击反馈" class="headerlink" title="受击反馈"></a><strong>受击反馈</strong></h3><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191846.jpg" alt="img"></p>
+<ul>
+<li>通过玩家画面上的特效表现，提供了”被何种方式伤害、伤害来源在哪、角色当前状态“等信息，使玩家能通过更符合直觉的方式获取这些反馈。</li>
+</ul>
+<h1 id="听觉"><a href="#听觉" class="headerlink" title="听觉"></a><strong>听觉</strong></h1><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712191855.gif" alt="img"></p>
+<center>优秀的的富有层级的枪械音效设计可以通过弱化UI图形的方式，有效减少玩家在游戏中的认知成本</center>
+
+<center></center>
+
+
+
+
+
+<h2 id="枪械特点音效"><a href="#枪械特点音效" class="headerlink" title="枪械特点音效"></a><strong>枪械特点音效</strong></h2><ul>
+<li><p>明确游戏<strong>背景特色，枪械特点</strong>，避免枪械与游戏剧情设定、美术风格出现<strong>体验割裂</strong>。  </p>
+<p>例：</p>
+<p>  无主之地、地铁系列同为末世废物背景，均有各类【杀马特非主流拼凑】枪械，但两者一属于美漫未来废土风，一属于现实末世风。因此在枪械音效上地铁系列明显更粗糙、松散、缺乏润滑，无主之地更无厘头、爽快、激烈。    守望先锋中ECHO与路霸虽然处于一款游戏，但一方是未来风格的激光延迟武器，一方是废土风格的改装垃圾枪。因此ECHO枪械音效明显更流畅、尾音较长、科技感，而路霸更刺耳、充满威胁</p>
+</li>
+</ul>
+<h2 id="枪械射击音效"><a href="#枪械射击音效" class="headerlink" title="枪械射击音效"></a><strong>枪械射击音效</strong></h2><h3 id="子弹射出"><a href="#子弹射出" class="headerlink" title="子弹射出"></a><strong>子弹射出</strong></h3><ul>
+<li>玩家开火后，子弹自枪膛射出的音效。一般来说威力越大的枪械，子弹射出音效越大。</li>
+</ul>
+<h3 id="射击尾音"><a href="#射击尾音" class="headerlink" title="射击尾音"></a><strong>射击尾音</strong></h3><ul>
+<li><p>子弹射出后，玩家自不同环境下听到的射击尾音是不同的。 </p>
+<p>如——</p>
+<p>  室内射击：声音在室内多次反射，</p>
+<pre><code>坑地射击：声音在四周坑壁反射回荡，</code></pre><p>  空地射击：声音几乎无反射</p>
+</li>
+</ul>
+<h2 id="后坐力表现音效"><a href="#后坐力表现音效" class="headerlink" title="后坐力表现音效"></a><strong>后坐力表现音效</strong></h2><h3 id="机械运动"><a href="#机械运动" class="headerlink" title="机械运动"></a><strong>机械运动</strong></h3><ul>
+<li>枪械开火后，弹壳由于受到火药产生气体的压力，推动枪机向后弹出弹壳，枪机向后撞击产生后坐力。在这个过程中，枪本身机械部件因运动发出声音。</li>
+</ul>
+<h3 id="后坐力撞击"><a href="#后坐力撞击" class="headerlink" title="后坐力撞击"></a><strong>后坐力撞击</strong></h3><ul>
+<li>枪械将后坐力传递给射手时，枪身与射手冲击也会产生音效。</li>
+</ul>
+<h2 id="弹壳音效"><a href="#弹壳音效" class="headerlink" title="弹壳音效"></a><strong>弹壳音效</strong></h2><h3 id="弹壳弹出"><a href="#弹壳弹出" class="headerlink" title="弹壳弹出"></a><strong>弹壳弹出</strong></h3><ul>
+<li>弹壳由于枪机向后撞击被弹出，弹出时发出的音效。不同枪械弹出音的频率大小均有差异。</li>
+</ul>
+<h3 id="弹壳落地"><a href="#弹壳落地" class="headerlink" title="弹壳落地"></a><strong>弹壳落地</strong></h3><ul>
+<li><p>弹壳被弹出后落地音效。不同枪械由于子弹口径不同，弹壳大小不同，加上地面材质不同，因此落地音种类大小均有差异。</p>
+<p>​    比如【P90】弹壳弹出明显更细致快速，【AWM】明显更沉闷、有重量感、速度更慢。</p>
+</li>
+</ul>
+<h3 id="命中音效"><a href="#命中音效" class="headerlink" title="命中音效"></a><strong>命中音效</strong></h3><ul>
+<li>子弹击中后，不同子弹命中不同物体后有不同的反馈。同时有些游戏会根据距离（是否可听到）、敌人状态（是否破甲、是否击杀）发出不同反馈。</li>
+</ul>
+<h1 id="触觉"><a href="#触觉" class="headerlink" title="触觉"></a><strong>触觉</strong></h1><p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200712192139.gif" alt="img"></p>
+<h2 id="主机控制器"><a href="#主机控制器" class="headerlink" title="主机控制器"></a><strong>主机控制器</strong></h2><ul>
+<li>主机游戏可借助游戏手柄的震动功能，在不同情况下设计不同强度/时间的震动反馈（微软家手柄的RT、RB键），为玩家提供独特的触觉体验。</li>
+</ul>
+<h2 id="手机控制器"><a href="#手机控制器" class="headerlink" title="手机控制器"></a><strong>手机控制器</strong></h2><ul>
+<li>部分手机游戏可借助类似3D touch的线性马达，根据游戏表现不同，为玩家提供符合直觉的触觉反馈。</li>
+</ul>
+<h1 id="附加"><a href="#附加" class="headerlink" title="附加"></a><strong>附加</strong></h1><center>由于FPS是一种相对贴合玩家生活的游戏类型，因此枪械射击手感的设计从始至终都要**符合玩家认知**，也就是**拟真**。  
+
+<p>拟真的设计，在于玩家是否在射击中体验到<strong>违和感</strong>，是否因为违和感<strong>转移</strong>了本应集中与射击体验上的注意力。  </p>
+<p>但和电影类似，设计者在保证拟真的基础上，也要让玩家在画面/音效中获取到足够的信息，完善游戏/观影体验。因此”<strong>艺术加工</strong>“是不可缺少的。  </p>
+<p>在上述基础上，【01-03】所有因素都可以在艺术加工的方法下，使各种元素的<strong>感官合理性＞逻辑合理性</strong></center></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">立鸿</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://pubkinja.com/2020/06/15/kgcGNRHA/">http://pubkinja.com/2020/06/15/kgcGNRHA/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">立鸿</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%B8%B8%E6%88%8F%E5%88%86%E6%9E%90/">
+                                    <span class="chip bg-color">游戏分析</span>
+                                </a>
+                            
+                                <a href="/tags/%E5%B0%84%E5%87%BB%E6%B8%B8%E6%88%8F/">
+                                    <span class="chip bg-color">射击游戏</span>
+                                </a>
+                            
+                                <a href="/tags/FPS/">
+                                    <span class="chip bg-color">FPS</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/06/17/tfwqlNNod/">
+                    <div class="card-image">
+                        
+                        <img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200726200310.png" class="responsive-img" alt="【面试】2020腾讯秋招面试上海站">
+                        
+                        <span class="card-title">【面试】2020腾讯秋招面试上海站</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            光子工作室丨2020腾讯秋招面试上海站
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%98%E6%A1%A3/" class="post-category">
+                                    存档
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06/07/qLE8zaob/">
+                    <div class="card-image">
+                        
+                        <img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/4a4ea62e2162d91967cd7b0de87910e2f0336f34.jpg" class="responsive-img" alt="【面试】为什么《战双》吸引你">
+                        
+                        <span class="card-title">【面试】为什么《战双》吸引你</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            《战双》是凭什么让我坚持这么久？
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%8A%A8%E4%BD%9C%E6%B8%B8%E6%88%8F/" class="post-category">
+                                    动作游戏
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B8%B8%E6%88%8F%E5%88%86%E6%9E%90/">
+                        <span class="chip bg-color">游戏分析</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%88%98%E5%8F%8C%E5%B8%95%E5%BC%A5%E4%BB%80/">
+                        <span class="chip bg-color">战双帕弥什</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 整理丨沉淀丨输出<br />'
+            + '文章作者: 立鸿<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('2'),
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">立鸿</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "6";
+                    var startDate = "13";
+                    var startHour = "24";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "前进四稳定跃迁时间 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "前进四稳定跃迁时间 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+
+            <br>
+            
+            &nbsp;<i class=""></i>&nbsp;字数统计:&nbsp;<span
+                class="white-color">11.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class=""></i>&nbsp;总链接数:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class=""></i>&nbsp;链接人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+
+            <br>
+            <script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_1279112643'%3E%3C/span%3E%3Cscript src='https://v1.cnzz.com/z_stat.php%3Fid%3D1279112643%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=slhzhuanyong@gmail.com" class="" target="_blank" data-tooltip="" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=1067827608&site=qq&menu=yes" class="" target="_blank" data-tooltip="" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <script type="text/javascript"> 
+    var OriginTitile = document.title, 
+    st; 
+    document.addEventListener("visibilitychange", function () {
+         document.hidden ? (document.title = "前进四发射倒计时 伍-肆-叁", clearTimeout(st)) : (document.title = 
+         "发射成功~", st = setTimeout(function () { 
+             document.title = OriginTitile 
+             }, 3e3)) 
+
+             }) 
+            
+    </script>
+
+<script type="text/javascript">
+    window.onload = function(){
+        //屏蔽键盘事件
+        document.onkeydown = function (){
+            var e = window.event || arguments[0];
+            //F12
+            if(e.keyCode == 123){
+                return false;
+            //Ctrl+Shift+I
+            }else if((e.ctrlKey) && (e.shiftKey) && (e.keyCode == 73)){
+                return false;
+            //Shift+F10
+            }else if((e.shiftKey) && (e.keyCode == 121)){
+                return false;
+            //Ctrl+U
+            }else if((e.ctrlKey) && (e.keyCode == 85)){
+                return false;
+            }
+        };
+        //屏蔽鼠标右键
+        document.oncontextmenu = function (){
+            return false;
+        }
+    }
+</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+
+
+</body>
+
+</html>
