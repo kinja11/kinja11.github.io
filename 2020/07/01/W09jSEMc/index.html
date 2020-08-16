@@ -365,7 +365,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.2k
                 </div>
                 
 
@@ -416,11 +416,17 @@
 <p>游戏中的每把武器都由模型表现，即角色在射击时所持有物体的3D渲染模型。当武器射击时，一个模型的“抖动”动画将被播放，为玩家带来所持武器后座的后坐力的印象。</p>
 <p>但是，这个动画对玩家在瞄准时的目标定位并无影响——因此出现了“视觉后坐力”一词。该动画仅仅为视觉效果呈现。</p>
 <p><strong>以下是用来说明这种效果的视频</strong>：使命召唤 现代战争中的AK47因为其令人难以忍受的射击动画而臭名昭著，因为射击动画的存在让玩家相信自己的瞄准点受到了干扰。在下列视频上，我们对AK47进行了调试，去除了它除了射击动画外所有的后坐力因素。如你所见，尽管玩家的视线受到了明显干扰，但射出的每发子弹都落在了完全相同的位置。</p>
-<p><strong>视频</strong></p>
+<iframe width="600" height="337" src="https://www.youtube.com/embed/YojmS8Ht3PY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 <p>视频中的视觉效果，虽然看起来和gunkick类似，但gunkick会导致玩家的射击出现视线模糊。我们将在后面详细说明。</p>
 <h2 id="屏幕后坐力Viewkick"><a href="#屏幕后坐力Viewkick" class="headerlink" title="屏幕后坐力Viewkick"></a>屏幕后坐力Viewkick</h2><p>Viewkick，指玩家开火时，造成玩家视口在方向上相对于原始瞄准点发生偏移的机制。</p>
 <p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200726120856.jpg" alt="此图说明了viewkick对玩家视口的影响 from—Den"></p>
-<p><strong>视频</strong></p>
+<iframe width="600" height="337" src="https://www.youtube.com/embed/ubfOM1-cp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 <p>射出第一发子弹后，摄像机会在偏航/俯仰方向上偏离玩家的原始瞄准点，当视点从原始瞄准点偏移时，一个加速度将作用于玩家视点，并将视点拉向原始瞄准点。总体视觉效果表现为，当玩家开火时，你的角色视野出现“抽搐“的效果。</p>
 <p>Viewkick造成的视野模糊是由“速度/加速度”模型确定的，并且独立的作用于偏航、俯仰（也许还有滚动）。该模型由每把武器所持有的的十个变量控制。</p>
 <pre><code>1. adsViewKickPitchMin
@@ -438,7 +444,7 @@
 <p>综上结论，为了简化讨论，我们将只讨论ADS视角中的偏航旋转，因为偏航方向的旋转同样适用于俯仰旋转（尽管存在一些误差）。并且应用于ADS视角的旋转机制也同样应用于HIP视角。</p>
 <p>我们通过附图开始描述viewkick的过程：</p>
 <p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200802113158.jpg" alt="Viewkick过程的第一步"></p>
-<p>红点代表视口的中心点                                                   </p>
+<p>红点代表视口的中心点，由于我们只考虑偏航旋转，则它只能向左或向右移动。红点越靠左，                                                   </p>
 <h3 id="枪坐力"><a href="#枪坐力" class="headerlink" title="枪坐力"></a>枪坐力</h3>
             </div>
             <hr/>
@@ -880,7 +886,7 @@
             <br>
             
             &nbsp;<i class=""></i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">11.9k</span>&nbsp;字
+                class="white-color">12k</span>&nbsp;字
             
             
             
