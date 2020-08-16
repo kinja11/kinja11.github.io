@@ -365,14 +365,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    9 分
                 </div>
                 
 
@@ -445,7 +445,30 @@
 <p>我们通过附图开始描述viewkick的过程：</p>
 <p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200802113158.jpg" alt="Viewkick过程的第一步"></p>
 <p>红点代表视口的中心点，由于我们只考虑偏航旋转，则它只能向左或向右移动。红点越靠左，则视口就越向左偏航，反之亦然。注意，尽管直觉上通常将向左偏航视为负向，但在COD中，左偏航是用正向表示的（有些反直觉，但的确如此）。</p>
-<p>首先，视口由玩家的原始瞄准点开始，该瞄准点由水平坐标轴上的垂直标记标识。当第一发子弹射出时，视口以随机速度v开始移动                                        </p>
+<p>首先，视口由玩家的原始瞄准点开始，该瞄准点由水平坐标轴上的垂直标记标识。当第一发子弹射出时，视口以随机速度v开始移动。尽管速度v是随机的，但可以保证它在“adsViewKickYawMin”和“adsViewKickYawMax”的范围内（以°/s即度每秒为单位）。如果速度v变为正+值，则视口将向左移动。如果速度v变为负值，则视口将向右移动（如上图）。</p>
+<p>随着视口的移动，一个指向原始瞄准点的加速度a将会作用在视口上。从本质上讲，这种加速度更像是一种将视口“拉回”原始瞄准点的“重力”。而加速度a的大小取决于“adsViewKickCenterSpeed”的值与视口的移动方向。</p>
+<ul>
+<li>当视口向远离原始瞄准点方向移动时，加速度a等同于“adsViewKickCenterSpeed”（以°/s即度每秒为单位）。</li>
+<li>当视口向原始瞄准点方向移动时，加速度a的值为“adsViewKickCenterSpeed”的1/16。</li>
+</ul>
+<p>因此将视口“拉回”到原始瞄准点的“重力”被设定为两个值，即“adsViewKickCenterSpeed”与“adsViewKickCenterSpeed*1/16”，并根据视口移动方向在这两个值之间来回切换。</p>
+<p>这种切换的最终视觉效果是，枪口上扬将很快达到峰值（即停止运动），而在恢复时的速度则显得相对缓慢。</p>
+<p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200816195704.jpg" alt="随v的移动方向而切换的加速度a的变化"></p>
+<iframe width="600" height="337" src="https://www.youtube.com/embed/v-HyVrB14wo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<center><u>视频示例，注意在视口远离/回复时被施加的不同加速度</u></center>
+
+
+
+<p>如果视口在下一次射击前就返回到原始瞄准点，则视口的运动即刻停止。无论其拥有多快的速度v或加速度a，视口都会停止在原始瞄准点上，直到玩家开出下一枪。</p>
+<p><img src="C:%5CUsers%5Csonglihong%5CDownloads%5C13177467_625615837604200_6474863860849358907_n.jpg" alt="两发射击间，视口返回到原始瞄准点的情况"></p>
+<p>在全自动模式射击期间，控制viewkick的机制可能与上述机制有所不同，而这取决于视口是否从先前的位置恢复（即返回到原始瞄准点）。如果发射下一枪时，视口已经从上一发射击中回复并位于原始瞄准点，则将重复上文所述机制。如果视口仍未恢复到原始瞄准点，则下一发子弹的viewkick规律将有以下规则决定：</p>
+<ul>
+<li>如果新的速度v_new（在[adsViewKickYawMin-adsViewKickYawMax]范围内随机确定）方向指向原始瞄准点，则速度v_new取 [ 随机确定值*1/16 ] 。</li>
+<li>如果新的速度v_new（在[adsViewKickYawMin-adsViewKickYawMax]范围内随机确定）方向远离原始瞄准点，则速度v_new等于随机确定值。</li>
+</ul>
+<p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200816195738.jpg" alt="如果视口不在原始瞄准点上，如何确定下一个速度？"></p>
+<p>另外值得注意的是，在这两种情况下，前一发子弹的速度都将不被继承。也就是说，viewkick不储存之前的射击过程，每一发子弹的viewkick都是相互独立的。</p>
 <h3 id="枪坐力"><a href="#枪坐力" class="headerlink" title="枪坐力"></a>枪坐力</h3>
             </div>
             <hr/>
@@ -887,7 +910,7 @@
             <br>
             
             &nbsp;<i class=""></i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">12.1k</span>&nbsp;字
+                class="white-color">12.7k</span>&nbsp;字
             
             
             
