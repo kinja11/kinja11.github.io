@@ -365,14 +365,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -471,6 +471,13 @@
 </ul>
 <p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200816195738.jpg" alt="如果视口不在原始瞄准点上，如何确定下一个速度？"></p>
 <p>另外值得注意的是，在这两种情况下，前一发子弹的速度都将不被继承。也就是说，viewkick不储存之前的射击过程，每一发子弹的viewkick都是相互独立的。</p>
+<p>这是viewkick机制的核心，这个处理也同样应用于俯仰旋转。唯一的区别是俯仰旋转的速度范围由 [adsViewKickPitchMin - adsViewKickPitchMax] 确定。与偏航旋转不同的是，在俯仰方向（即垂直坐标轴）上，向上为+正，而向下为-负。</p>
+<p>以上是对viewkick机制引起的视口在偏航/俯仰上的屏幕震动与后坐力的解释。但需要注意的是，当viewkick机制同时应用于偏航与俯仰两个维度时时，会出现一些复杂现象。</p>
+<p>首先，当偏航与俯仰同时出现时，我们需要从每个维度来解释视口“远离”与“靠近”原始瞄准点动作的过程，而不是从整体解释。例如，视口可能会在偏航维度上”远离“原始瞄准点，同时在俯仰维度上”靠近“原始瞄准点。</p>
+<p>为了解决这个问题，游戏会将两个分离且独立的加速度应用于每个维度上。在这种情况下，偏航与俯仰加速度均为adsViewKickCenterSpeed的1/16 —— 并且在任意时间减小一种加速度的同时，另一种加速度与CenterSpeed值相同或两种加速度都相等。当然，这取决于视口在两个维度向哪个方向移动。</p>
+<p>当视口在两种维度之一完全恢复，而另一维度仍在恢复时，会出现一些奇怪的情况。例如，视口在“偏航”维度中完全恢复，但仍未在“俯仰”维度上恢复完全。</p>
+<p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200817113010.jpg" alt="独立处理偏航和俯仰时引起的边界情况"></p>
+<p>严格来说，假如视口还没有恢复到原始瞄准点，因为视口位于该点上方的某个位置</p>
 <h3 id="枪坐力"><a href="#枪坐力" class="headerlink" title="枪坐力"></a>枪坐力</h3>
             </div>
             <hr/>
@@ -912,7 +919,7 @@
             <br>
             
             &nbsp;<i class=""></i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">12.7k</span>&nbsp;字
+                class="white-color">13.1k</span>&nbsp;字
             
             
             
