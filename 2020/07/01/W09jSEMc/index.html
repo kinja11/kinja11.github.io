@@ -365,14 +365,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    13 分
                 </div>
                 
 
@@ -477,7 +477,16 @@
 <p>为了解决这个问题，游戏会将两个分离且独立的加速度应用于每个维度上。在这种情况下，偏航与俯仰加速度均为adsViewKickCenterSpeed的1/16 —— 并且在任意时间减小一种加速度的同时，另一种加速度与CenterSpeed值相同或两种加速度都相等。当然，这取决于视口在两个维度向哪个方向移动。</p>
 <p>当视口在两种维度之一完全恢复，而另一维度仍在恢复时，会出现一些奇怪的情况。例如，视口在“偏航”维度中完全恢复，但仍未在“俯仰”维度上恢复完全。</p>
 <p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200817113010.jpg" alt="独立处理偏航和俯仰时引起的边界情况"></p>
-<p>严格来说，假如视口还没有恢复到原始瞄准点，因为视口位于该点上方的某个位置</p>
+<p>严格来说，假如视口还没有恢复到原始瞄准点，并且视口存在与原始瞄准点在俯仰维度上的，无法继续回复的偏移。则我们可以将其视为已经在俯仰维度上完全回复，以便于确定下一次射击时，viewkick在俯仰维度上对视口造成的偏移。</p>
+<p>同样的，由于在下一发射击时，视口将不会出现偏航维度的偏移，所以视口似乎会沿着不可见的墙壁滑落。这是因为发生了俯仰维度上的回复。而当偏航与俯仰维度发生颠倒时，也会发生同样的情况。</p>
+<p>而且系统还有一些安全措施，可以用来防止大后坐力武器造成屏幕偏移到达极限值。在游戏中，它经过专门设置，以防止视口在任何维度偏转都无法超过10°——这是一种适用于所有武器的设定。可以说，这些限制构成了一种边界，一种使viewkick不会过度影响视口的边界。</p>
+<p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200818204333.jpg" alt="防止极端偏移的边界"></p>
+<p>如果在俯仰方向上到达边界，视口的速度将直接变为0，并且根据CenterSpeed值开始恢复。</p>
+<p>但有一个仅应用于偏航维度的奇怪机制。在每次射击时，视口除了每秒提供的两个度数的速度外，还将每秒为滚动提供一个度数。正+偏航（左）将导致逆时针滚动，负-偏航将导致顺时针滚动。即使视口在偏航维度到达10°边界中任何一个，视口也可以继续滚动，直到滚动度数也达到10°为止。</p>
+<p>ps：视口的滚动与偏航将以完全相同的速率回复。</p>
+<iframe width="560" height="349" src="https://www.youtube.com/embed/TvWWKBjCaro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>↑ 游戏中的偏航示例，值得注意的是，尽管视口滚动到10°所需时间是偏航10°的两倍，但偏航与滚动都同时开始回复，因此速率相同。</p>
 <h3 id="枪坐力"><a href="#枪坐力" class="headerlink" title="枪坐力"></a>枪坐力</h3>
             </div>
             <hr/>
@@ -919,7 +928,7 @@
             <br>
             
             &nbsp;<i class=""></i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">13.1k</span>&nbsp;字
+                class="white-color">13.6k</span>&nbsp;字
             
             
             
