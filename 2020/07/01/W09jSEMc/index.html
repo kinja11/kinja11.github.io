@@ -365,7 +365,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    4.1k
                 </div>
                 
 
@@ -385,7 +385,7 @@
                 <blockquote>
 <p>闲暇时间翻译，进度较慢，持续润色</p>
 </blockquote>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>毋庸置疑的，后坐力是COD系列中最复杂，最令人头痛的系统。尽管自cod系列推出以来，该机制的底层基础几乎没有过改变，但对这些基础的全面理解在短时间内仍然难以捉摸。</p>
+<h2 id="预言"><a href="#预言" class="headerlink" title="预言"></a>预言</h2><p>毋庸置疑的，后坐力是COD系列中最复杂，最令人头痛的系统。尽管自cod系列推出以来，该机制的底层基础几乎没有过改变，但对这些基础的全面理解在短时间内仍然难以捉摸。</p>
 <p>而COD系列对其背后奥秘不懈的探寻是零散且渐进的——在过去九年间，通过每位志愿者的细微顿悟所总结的集体作品。通过这些分布在论坛中，跨越多个领域的帖子，你会发现这些细碎的灵感顿悟合而为一，形成了对后坐力机制几近完美的理解。</p>
 <p>但这些记录着探索结果的碎片，也让关于后坐力机制的信息深埋在论坛无数帖子当中。以至于一直没有一个可以完整记录、从各种技术细节阐明后坐力机制的位置。</p>
 <p>这是一个希望补救这个现象的结果，在这里，我们将尽一切可能去解释与阐明COD系列中已知的后坐力方面的概念。当然这不是我一个人的功劳，我要向每个部分的第一发现者致敬，如果对可能因意外未提及的朋友表示抱歉。  </p>
@@ -421,7 +421,7 @@
 </center>
 
 <p>视频中的视觉效果，虽然看起来和gunkick类似，但gunkick会导致玩家的射击出现视线模糊。我们将在后面详细说明。</p>
-<h2 id="屏幕后坐力Viewkick"><a href="#屏幕后坐力Viewkick" class="headerlink" title="屏幕后坐力Viewkick"></a>屏幕后坐力Viewkick</h2><p>Viewkick，指玩家开火时，造成玩家视口在方向上相对于原始瞄准点发生偏移的机制。</p>
+<h2 id="屏幕后坐力（Viewkick）"><a href="#屏幕后坐力（Viewkick）" class="headerlink" title="屏幕后坐力（Viewkick）"></a>屏幕后坐力（Viewkick）</h2><p>Viewkick，指玩家开火时，造成玩家视口在方向上相对于原始瞄准点发生偏移的机制。</p>
 <p><img src="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200726120856.jpg" alt="此图说明了viewkick对玩家视口的影响 from—Den"></p>
 <center>
 <iframe width="600" height="337" src="https://www.youtube.com/embed/ubfOM1-cp3E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -484,10 +484,19 @@
 <p>如果在俯仰方向上到达边界，视口的速度将直接变为0，并且根据CenterSpeed值开始恢复。</p>
 <p>但有一个仅应用于偏航维度的奇怪机制。在每次射击时，视口除了每秒提供的两个度数的速度外，还将每秒为滚动提供一个度数。正+偏航（左）将导致逆时针滚动，负-偏航将导致顺时针滚动。即使视口在偏航维度到达10°边界中任何一个，视口也可以继续滚动，直到滚动度数也达到10°为止。</p>
 <p>ps：视口的滚动与偏航将以完全相同的速率回复。</p>
+<center>
 <iframe width="560" height="349" src="https://www.youtube.com/embed/TvWWKBjCaro" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
-<p>↑ 游戏中的偏航示例，值得注意的是，尽管视口滚动到10°所需时间是偏航10°的两倍，但偏航与滚动都同时开始回复，因此速率相同。</p>
-<h3 id="枪坐力"><a href="#枪坐力" class="headerlink" title="枪坐力"></a>枪坐力</h3>
+<center>
+↑ 游戏中的偏航示例，值得注意的是，尽管视口滚动到10°所需时间是偏航10°的两倍，但偏航与滚动都同时开始回复，因此速率相同。
+</center>
+最后的最后，正如前文所述，其中所解释的关于viewkick的内容同样适用于hip。某些特定武器也会存在不同的hip与ads viewkick变量。因此，这些武器视口可能会表现出不同的表现，而这正取决于玩家选择使用hip还是ads射击。
+
+<h2 id="枪械后坐力（Gunkick）"><a href="#枪械后坐力（Gunkick）" class="headerlink" title="枪械后坐力（Gunkick）"></a>枪械后坐力（Gunkick）</h2><p>暂略，目前主攻viewkick</p>
+<h2 id="视觉后坐力的数学运算与定性分析"><a href="#视觉后坐力的数学运算与定性分析" class="headerlink" title="视觉后坐力的数学运算与定性分析"></a>视觉后坐力的数学运算与定性分析</h2><h3 id="viewkick"><a href="#viewkick" class="headerlink" title="viewkick"></a>viewkick</h3><p>本章的目的是用数学描述，表示在视口在viewkick作用下演变的过程。在分析过程中，我们将仅考虑偏航维度下的运动。为简单起见，我们将仅考虑偏航维度下向正+（左侧）方向的移动，同时，我们也会忽略视口到达运动边界时发生的其他复合运动。</p>
+<p>我们注意到，视口处于匀加速状态时，除了视口改变方向或停留在原始瞄准点的情况外，经受恒定加速度下的粒子运动是一个简单且容易理解的问题。</p>
+
             </div>
             <hr/>
 
@@ -928,7 +937,7 @@
             <br>
             
             &nbsp;<i class=""></i>&nbsp;字数统计:&nbsp;<span
-                class="white-color">13.6k</span>&nbsp;字
+                class="white-color">13.9k</span>&nbsp;字
             
             
             
