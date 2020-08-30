@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="【持续翻译中】关于辅助瞄准：你需要知道的一切, 整理丨沉淀丨输出">
+    <meta name="keywords" content="【翻译转载】关于辅助瞄准：你需要知道的一切, 整理丨沉淀丨输出">
     <meta name="description" content="FPS狂热爱好者，努力入门的策划练习生">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【持续翻译中】关于辅助瞄准：你需要知道的一切 | 整理丨沉淀丨输出</title>
+    <title>【翻译转载】关于辅助瞄准：你需要知道的一切 | 整理丨沉淀丨输出</title>
     <link rel="icon" type="image/png" href="https://post-01-1259276092.cos.ap-nanjing.myqcloud.com/20200830094530.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -206,7 +206,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【持续翻译中】关于辅助瞄准：你需要知道的一切</h1>
+                    <h1 class="description center-align post-title">【翻译转载】关于辅助瞄准：你需要知道的一切</h1>
                 </div>
             </div>
         </div>
@@ -398,8 +398,8 @@
 <li>拇指肌肉</li>
 <li>转向加速度</li>
 </ul>
-<h2 id="底层辅助机制"><a href="#底层辅助机制" class="headerlink" title="底层辅助机制"></a>底层辅助机制</h2><p>接下来，介绍辅助机制如何在实际game play中影响瞄准，并帮助玩家。下文将介绍一些开发人员在设计辅助瞄准机制时常用的一些概念和工具。</p>
-<h3 id="预测——机制生效时机"><a href="#预测——机制生效时机" class="headerlink" title="预测——机制生效时机"></a><strong>预测——机制生效时机</strong></h3><p>对类似辅助瞄准的侵入式程序的正常工作流程来说，它首先必须正确预测何时才需要辅助。否则将可能危害整个游戏的game play过程，或导致玩家丧失良好游戏体验。试想一下，在你狙击他人并移动准星时，有另一个目标在你视线中移动，如果程序无法准确预测便瞄准辅助运动或帮助你瞄准一个目标，那体验糟糕得多。</p>
+<h2 id="底层辅助机制"><a href="#底层辅助机制" class="headerlink" title="底层辅助机制"></a>底层辅助机制</h2><p>接下来，介绍辅助机制如何在实际game play中影响瞄准并帮助玩家。下文将介绍一些开发人员在设计辅助瞄准机制时常用的一些概念和工具。</p>
+<h3 id="判定——机制生效时机"><a href="#判定——机制生效时机" class="headerlink" title="判定——机制生效时机"></a><strong>判定——机制生效时机</strong></h3><p>对辅助瞄准这样的游戏内机制的运行来说，首先必须判定玩家什么时候需要辅助。否则将损害整个游戏的game play并损害玩家良好游戏体验。试想在游戏中，当你试图狙击瞄准目标并移动准星时，有另一个目标在你视口中移动，没什么比程序未准确判定就开始移动或帮助你移动准星体验更糟的了。</p>
 <p>辅助瞄准可以通过多种方式实现预测。而最常见的便是在目标周围设置一个<u>区域</u>，辅助瞄准将根据多种因素做出最终决定，比如你与<u>区域</u>的距离，你在<u>区域</u>内的时长以及目标的移动速度。</p>
 <h3 id="磁性"><a href="#磁性" class="headerlink" title="磁性"></a><strong>磁性</strong></h3><ul>
 <li>磁性指调整摄像机的旋转速度，使其与目标移动速度相匹配。通常情况下，是通过紧密匹配玩家输入以使其转向速度为基础来完成的。相比剥离输入后简单的两者匹配，这为它带来了更自然的感觉。这是开发辅助瞄准时需要的最重要的概念。</li>
